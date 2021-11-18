@@ -1,13 +1,1124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的主页</title>
+    <meta charset="utf-8">
+    <title>QQ聊天框</title>
+    <link rel="stylesheet"href="./Css/font-awesome-4.7.0/css/font-awesome.css">
+
+<style type="text/css">
+ 
+    html,body{/*网页全局控制*/
+
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgb(254, 0, 0)
+       }
+
+     div.d1{/*大五角星*/
+
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 70px solid #FFDE00;
+     border-right: 100px solid transparent;/*透明色*/
+     border-left: 100px solid transparent; /*透明色*/    
+     transform: rotate(35deg);
+     margin-left:100px; 
+     margin-top: 130px;
+      } 
+
+    div.d1::before{/*大五角星伪类元素*/
+
+     content: "";  
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 70px solid #FFDE00;
+     border-right: 100px solid transparent;/*透明色*/
+     border-left: 100px solid transparent;/*透明色*/
+     transform: rotate(-145deg);
+     left:-102px; 
+     top:6px;
+            }
+
+    div.d1::after{/*大五角星伪类元素*/
+
+     content: "";    
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 70px solid #FFDE00;
+     border-right: 100px solid transparent;/*透明色*/
+     border-left: 100px solid transparent;/*透明色*/
+     transform: rotate(-70deg);
+     left: -105px;
+       }
+
+    div.x1{/*第一个小五角星*/
+
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/ 
+     border-left: 36px solid transparent;/*透明色*/     
+     transform: rotate(15deg);
+     margin-left: 415px;
+     margin-top: 115px;
+
+    
+     }
+
+    div.x1::before{ /*第一个小五角星伪类元素*/
+
+     content: "";     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-70deg);
+     top: 0px;
+     left: -36px;
+     }
+    div.x1::after{/*第一个小五角星伪类元素*/
+
+     content: "";
+     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-145deg);
+     top: 3px;
+     left: -35px;
+     }
+
+    div.x2{/*第二个小五角星*/
+
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/ 
+     border-left: 36px solid transparent;/*透明色*/
+     
+     transform: rotate(35deg);
+     margin-left: 415px;
+     margin-top: 220px;
+      
+       }
+    div.x2::before{ /*第二个小五角星伪类元素*/
+
+     content: "";   
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-70deg);
+     top: 0px;
+     left: -36px;
+        }
+
+    div.x2::after{/*第二个小五角星伪类元素*/ 
+
+     content: "";
+     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-145deg);
+     top: 3px;
+     left: -35px;
+      }
+    div.x3{/*第三个小五角星*/
+
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/ 
+     border-left: 36px solid transparent;/*透明色*/
+     
+     transform: rotate(55deg);
+     margin-left: 335px;
+     margin-top: 290px;
+
+    
+    }
+   div.x3::before{ /*第三个小五角星伪类元素*/
+
+     content: "";
+     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-70deg);
+     top: 0px;
+     left: -36px;
+      }
+
+    div.x3::after{ /*第三个小五角星伪类元素*/
+
+     content: "";
+     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-145deg);
+     top: 3px;
+     left: -35px;
+      }
+    div.x4{/*第四个小五角星*/
+
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/ 
+     border-left: 36px solid transparent;/*透明色*/
+     
+     transform: rotate(55deg);
+     margin-left: 335px;
+     margin-top: 50px;
+
+    
+     }
+    div.x4::before{ /*第四个小五角星伪类元素*/
+     content: "";
+     
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-70deg);
+     top: 0px;
+     left: -36px;
+     }
+    div.x4::after{ /*第四个小五角星伪类元素*/
+
+     content: "";  
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     border-bottom: 25px solid #FFDE00;
+     border-right: 36px solid transparent;/*透明色*/
+     border-left: 36px solid transparent;/*透明色*/
+     transform:rotate(-145deg);
+     top: 3px;
+     left: -35px;
+     }
+
+     div.wai{/*手机外表*/
+
+         width: 310px;
+         height: 600px;
+         position: absolute;
+         border: 5px solid black;
+         color: white;
+         border-radius: 35px;
+         background:black;
+         top: 80px;
+         left: 800px;
+        
+        }
+
+
+   div.sjpm{/*手机屏幕*/
+          width: 300px;
+          height: 570px;
+          position: absolute;
+           border: solid;
+          color: black;
+          background: white;
+          border-radius:35px;
+          top: 4.5px;
+          left: 1px;
+          
+      }
+
+
+   div.tbbj{/*头部背景*/
+          width: 298px;
+          height: 85px;
+          position: absolute;
+          border: solid;
+          background:rgb(0,168,255); 
+          color:rgb(0,168,255);
+          border-radius:25px 25px 0px 0px;
+          top: 0px;
+          left: 0px;
+          
+       }
+    div.lh{  /*手机刘海*/
+          width: 130px;
+          height: 25px;
+          position: absolute;
+          border: solid;
+          color: black;
+          background: black;
+          
+          border-radius:0 0 20px 20px;
+          top: -7px;
+          left: 80px;
+          
+
+        }
+
+   div.ltk{/*输入内容区域的背景*/ 
+
+             width: 300px;
+             height: 90px;
+             position: absolute;
+             border: solid;
+             color:black;
+             background: white;
+             border-radius:0px 0px 30px 30px;
+             background:#E6E6E6;
+             left: -1px;
+             top: 496px;
+             
+        }
+
+
+
+    img.ltbj{/*聊天背景*/
+
+       width:300px;
+       height: 411px;
+       position: absolute;
+       left:-252px; 
+       top: -418px;
+       
+
+
+     }
+
+       div.ylj1{/*音量键大*/ 
+
+          width:3px;
+          height: 60px;
+          position: absolute;
+          border: solid;
+          background-color:#000000;
+          
+          top: 195px;
+          left: 795px;
+          border-radius: 5px;
+       }
+
+      div.ylj2{ /*音量键小*/
+
+          width:3px;
+          height: 60px;
+          position: absolute;
+          border: solid;
+          background-color:#000000;
+          border-radius: 5px;
+          top: 260px;
+          left: 795px;
+          
+       }
+
+      div.jyj{ /*静音键*/
+
+          width:3px;
+          height: 20px;
+          position: absolute;
+          border: solid;
+          background-color:#000000;
+          border-radius: 5px;
+          top: 150px;
+          left: 795px;
+          
+         
+         }
+      div.kgj{ /*开关键*/
+
+          width:3px;
+          height: 60px;
+          position: absolute;
+          border: solid;
+          background-color:#000000;       
+          border-radius: 5px;
+          top: 200px;
+          left: 1118px;
+          
+      } 
+
+      div.heixian{
+           /* 手机屏幕底部一条黑线 */
+          width: 150px;
+          height: 2px;
+          position: absolute;
+          border: solid;
+          color: black;
+          background: #000000;
+          border-radius:5px;
+          top: 565px;
+          left: 70px;
+          
+
+    
+      }
+
+
+
+    div.fsk{/*内容发送框*/ 
+
+             width: 235px;
+             height: 15px;
+             position: absolute;
+             border: solid;
+             color:#fff;
+             background: #fff;           
+             border-radius: 55px 55px 55px 55px;
+             left: 4px;
+             top: 510px;
+             opacity: 1;
+             
+       }
+
+   div.fs{/*发送两字*/
+              width: 33px;
+              height: 25px;
+              position: absolute;
+              border: solid;
+              color:#fff;
+              background:rgb(177,239,254); 
+              border-radius: 55px;
+              left: 250px;
+              top: 505px;
+            
+      }
+     
+  
+    
+    div.tx1{ /*第一个头像*/
+
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        background: url("./Images/1.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        top: -400px;
+        left: -410px;
+        animation: yd .3s forwards;
+        animation-delay: 3s;
+        opacity: 0;
+        
+      }
+   
+    div.tx1::after{
+        content: "潘艳玲";
+        width: 52px;
+        height: 10px;
+        position: absolute;
+        color: #fff;
+        font-size: 12px;        
+        top: 0px;
+        left: 60px;
+      }
+
+    div.tx2{/*第二个头像*/
+
+        width:45px;
+        height: 45px;
+        position: absolute;
+        background: url("./Images/2.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        top: -320px;
+        left: -410px;
+        animation: yd .3s forwards;
+        animation-delay: 4s;
+        opacity: 0;
+        
+      }
+
+    div.tx2::before{
+        content: "管理员";
+        width: 35px;
+        height: 13px;
+        position: absolute;
+        color:  rgb(255, 255, 255);
+        font-size: 8px;
+        
+        background:  springgreen;
+        top: -4px;
+        left: 48px;
+     }
+
+    div.tx2::after{ 
+        content: "天边的雨露";
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        color: white;
+        font-size: 12px;
+        
+        top: -5px;
+        left: 80px;
+      }
+
+   div.tx3{/*第三个头像*/
+
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        background: url("./Images/3.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        top: -240px;
+        left:-410px;
+        animation: yd .3s forwards;
+        animation-delay: 5s;
+        opacity: 0;
+        
+      }
+    div.tx3::before{
+        content: "管理员";
+        width: 35px;
+        height: 13px;
+        position: absolute;
+        color:  rgb(255, 255, 255);
+        font-size: 8px;        
+        background:  springgreen;
+        top: -4px;
+        left: 48px;
+     }
+
+    div.tx3::after{
+        content: "天边的雨露";
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        color: white;
+        font-size: 12px;
+        
+        top: -5px;
+        left: 85px;
+     }
+    div.tx4{ /*第四个头像*/
+
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        background: url("./Images/4.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        top: -170px;
+        left:-410px;
+        animation: yd .3s forwards;
+        animation-delay: 6s;
+        opacity: 0;
+        
+        }
+
+    div.tx4::before{
+
+        content: " ";
+        width: 30px;
+        height: 13px;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 8px;       
+        background:Transparent;
+        top: -5px;
+        left: 48px;
+       }
+
+    div.tx4::after{
+
+       
+        width: 40px;
+        height: 13px;
+        position: absolute;
+        color: #fff;
+        font-size: 12px;
+        content: "潘艳玲";
+        top: 0px;
+        left: 60px;
+        }
+    div.tx5{/*第五个头像*/ 
+
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        background: url("./Images/5.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        top: -90px;
+        left:-410px;
+        animation: yd .3s forwards;
+        animation-delay: 7s;
+         opacity: 0;
+        
+        }
+
+    div.tx5::before{
+
+        content: " ";
+        width: 30px;
+        height: 13px;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 8px;    
+        background: Transparent;
+        top: 0px;
+        left: 60px;
+    }
+    div.tx5::after{
+        content: "薛睿怡";       
+        width: 56px;
+        height: 10px;
+        position: absolute;
+        font-size: 12px;
+        color:white;
+        top: 0px;
+        left: 60px;
+      }
+    
+    div.dhk1{/*对话框1*/
+
+        width: 150px;
+        height:35px;
+        position: absolute;
+        text-align: center;
+        line-height: 2em;   
+        background-color:rgb(255, 255, 255) ;
+        color: #000000;
+        border-radius: 14px;      
+        left: -360px;
+        top: -380px;
+        animation:yd .3s forwards;
+        animation-delay: 3s;
+        opacity: 0; 
+      }
+
+    div.dhk1::after{
+
+        content: '';     
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-right: 12px solid rgb(255, 255, 255);
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        left: -18px;
+        top: 7px;
+        
+      }
+    div.dhk2{/*对话框2*/
+
+        width: 130px;
+        height:35px;
+        position: absolute;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+        left: -360px;
+        top:-300px;
+        animation: yd .3s forwards;
+        animation-delay: 4s;
+        opacity: 0;
+      }
+
+   div.dhk2::after{
+
+        content: '';
+        
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-right: 12px solid rgb(255, 255, 255);
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        left: -20px;
+        top: 7px;
+       }
+
+    div.dhk3{/*对话框3*/
+        width: 90px;
+        height:35px;
+        position: absolute;
+        text-align: center;
+        line-height: 2em;   
+         color:#000000;   
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+        left: -355px;
+        top:-220px;
+        animation: yd .3s forwards;
+        animation-delay: 5s;
+        opacity: 0;
+        }
+
+
+    div.dhk3::after{
+
+        content: '';
+        
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-right: 12px solid rgb(255, 255, 255);
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        left: -20px;
+        top: 7px;
+        }
+
+   div.dhk4{/*对话框4*/
+        width: 60px;
+        height:35px;
+        position: absolute;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+        left: -360px;
+        top:-150px;
+        animation: yd .3s forwards;
+        animation-delay: 6s;
+        opacity: 0;
+        }
+
+    div.dhk4::after{
+
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        
+        border-right: 12px solid rgb(255, 255, 255);
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        left: -18px;
+        top: 7px;
+       }
+
+    div.dhk5{/*对话框5*/
+        width: 100px;
+        height:35px;
+        position: absolute;
+        text-align: center;
+        line-height: 2em;
+         color: #000000;     
+        border-radius: 14px;
+        background-color: rgb(255, 255, 255);
+        left: -360px;
+        top: -70px;
+        animation: yd .3s forwards;
+        animation-delay: 7s;
+        opacity: 0;
+       }
+    div.dhk5::after{
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;              
+        border-right: 12px solid rgb(255, 255, 255);
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        left: -18px;
+        top: 7px;
+        }
+     
+    
+ 
+@keyframes yd
+  {/*对话框动态效果*/
+
+   0%{
+
+      transform: translateX(0px);
+        opacity: 0;
+    }
+     50%{
+
+      transform: translateX(140px);
+        opacity: 0.5;
+      }
+    100%{
+
+      transform: translateX(165px);
+        opacity: 1;
+    }
+
+  }
+
+  #canvas /*烟花特效控制*/
+
+      {
+         width: 100%;
+         height: 100%;
+      }
+</style>
 </head>
 <body>
-    <p style="color: blue;size: 100px;">今天的天气非常的好！</p>
-    
+
+<div class="d1"></div>
+<div class="x1"></div>
+<div class="x2"></div>
+<div class="x3"></div>
+<div class="x4"></div>
+<div class="wai">
+<div class="sjpm">
+<div class="tbbj"></div>
+<div class="ltk"></div>
+<div class="fsk"></div>
+<div class=fs>发送
+   <img src="./Images/bj.jpg" class="ltbj">
+    <div class="tx1"></div>
+    <div class="tx2"></div>
+    <div class="tx3"></div>
+    <div class="tx4"></div>
+    <div class="tx5"></div>
+    <div class="dhk1">你们谁有腾讯会员？</div>
+    <div class="dhk2">我有爱奇艺会员。</div>
+    <div class="dhk3">我问下。</div>
+    <div class="dhk4">OK!</div>
+    <div class="dhk5">Hello!我有!</div>
+    </div>
+  <i class="fa fa-microphone" style="left:12px;top:538px;position: absolute;color:rgb(152,158,180); font-size: 25px;" ></i>                               
+  <i class="fa fa-picture-o" style="left:48px; top:538px;position: absolute;color:rgb(152,158,180);font-size: 25px;"></i>
+
+  <i class="fa fa-camera" style="left: 106px; top:538px;position: absolute;color:rgb(152,158,180);font-size: 25px;"></i>
+  <i class="fa fa-smile-o" style="left:218px; top:538px;position: absolute;color:rgb(152,158,180);font-size: 25px;"></i>
+  <i class="fa fa-plus-circle" style="left: 265px; top:538px;position: absolute;color:rgb(152,158,180);font-size:25px;"></i>
+<div class="lh"></div> 
+<div class="heixian"></div>
+<div >      
+        <img src="./Images/sz.png"  style="width:20px;height:20px; left:240px; top: 43px;position: absolute;">
+        <img src="./Images/hb.png" style="width:27px;height:27px; left:165px; top:538px;position: absolute;" >
+    </div>
+  <i class="fa fa-battery-three-quarters" style="left:262px; top: 5px;color:#fff; position: absolute;"><span style="left:-250px;font-size:14px;position:absolute;top:4px;color:#fff ">16:00</span></i>
+  <i class=" fa fa-signal " style="left:215px; top: 5px;  color:#fff;position: absolute;"><span style="top:3px ;left:20px;position: absolute;color:#fff;font-size: 14px;">4G</span></i>
+  <i class="fa fa-chevron-left" style="left:20px; top:45px; position: absolute; color: #fff;font-size:18px;" ></i> <span style=" left:94px; top: 40px; position: absolute;color: #fff;font-size: 14px;"> 为梦想努力(93)</span>
+       <span style="left:112px; top: 58px; position: absolute;color:#fff;font-size:12px;">78人在线</span> 
+  <i class="fa fa-bars" style="left:270px; top:45px; position: absolute;color: #fff;"></i>
+  <i class="fa fa-chevron-circle-down" style="left:102px; top: 62px; position: absolute;color: #fff;font-size: 10px;"></i>
+  
+</div>
+  </div>
+<div class="kgj"></div>
+<div class="ylj1"></div>S
+<div class="ylj2"></div>
+  <div class="jyj"></div>  
+  <audio controls autoplay="ture" hidden loop="-1">
+        <source src="./Music/1.mp3" type="audio/MP3">
+    </audio>
 </body>
-</html>
+      
+ 
+  <canvas id="canvas"></canvas> <!-- 全屏烟花效果,代码来自CSDN用户分享 -->
+  <script>
+   function initVars(){
+    pi=Math.PI;
+    ctx=canvas.getContext("2d");
+    canvas.width=canvas.clientWidth;
+    canvas.height=canvas.clientHeight;
+    cx=canvas.width/2;
+    cy=canvas.height/2;
+    playerZ=-25;
+    playerX=playerY=playerVX=playerVY=playerVZ=pitch=yaw=pitchV=yawV=0;
+    scale=600;
+    seedTimer=0;seedInterval=5,seedLife=100;gravity=.02;
+    seeds=new Array();
+    sparkPics=new Array();
+    s="https://cantelope.org/NYE/";
+    for(i=1;i<=10;++i){
+        sparkPic=new Image();
+        sparkPic.src=s+"spark"+i+".png";
+        sparkPics.push(sparkPic);
+    }
+    sparks=new Array();
+    pow1=new Audio(s+"pow1.ogg");
+    pow2=new Audio(s+"pow2.ogg");
+    pow3=new Audio(s+"pow3.ogg");
+    pow4=new Audio(s+"pow4.ogg");
+    frames = 0;
+    }
+
+   function rasterizePoint(x,y,z){
+
+    var p,d;
+    x-=playerX;
+    y-=playerY;
+    z-=playerZ;
+    p=Math.atan2(x,z);
+    d=Math.sqrt(x*x+z*z);
+    x=Math.sin(p-yaw)*d;
+    z=Math.cos(p-yaw)*d;
+    p=Math.atan2(y,z);
+    d=Math.sqrt(y*y+z*z);
+    y=Math.sin(p-pitch)*d;
+    z=Math.cos(p-pitch)*d;
+    var rx1=-1000,ry1=1,rx2=1000,ry2=1,rx3=0,ry3=0,rx4=x,ry4=z,uc=(ry4-ry3)*(rx2-rx1)-(rx4-rx3)*(ry2-ry1);
+    if(!uc) return {x:0,y:0,d:-1};
+    var ua=((rx4-rx3)*(ry1-ry3)-(ry4-ry3)*(rx1-rx3))/uc;
+    var ub=((rx2-rx1)*(ry1-ry3)-(ry2-ry1)*(rx1-rx3))/uc;
+    if(!z)z=.000000001;
+    if(ua>0&&ua<1&&ub>0&&ub<1){
+        return {
+            x:cx+(rx1+ua*(rx2-rx1))*scale,
+            y:cy+y/z*scale,
+            d:Math.sqrt(x*x+y*y+z*z)
+        };
+    }else{
+        return {
+            x:cx+(rx1+ua*(rx2-rx1))*scale,
+            y:cy+y/z*scale,
+            d:-1
+        };
+    }
+}
+
+function spawnSeed(){
+    
+    seed=new Object();
+    seed.x=-50+Math.random()*100;
+    seed.y=25;
+    seed.z=-50+Math.random()*100;
+    seed.vx=.1-Math.random()*.2;
+    seed.vy=-1.5;//*(1+Math.random()/2);
+    seed.vz=.1-Math.random()*.2;
+    seed.born=frames;
+    seeds.push(seed);
+}
+
+function splode(x,y,z){
+    
+    t=5+parseInt(Math.random()*150);
+    sparkV=1+Math.random()*2.5;
+    type=parseInt(Math.random()*3);
+    switch(type){
+        case 0:
+            pic1=parseInt(Math.random()*10);
+            break;
+        case 1:
+            pic1=parseInt(Math.random()*10);
+            do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+            break;
+        case 2:
+            pic1=parseInt(Math.random()*10);
+            do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+            do{ pic3=parseInt(Math.random()*10); }while(pic3==pic1 || pic3==pic2);
+            break;
+    }
+    for(m=1;m<t;++m){
+        spark=new Object();
+        spark.x=x; spark.y=y; spark.z=z;
+        p1=pi*2*Math.random();
+        p2=pi*Math.random();
+        v=sparkV*(1+Math.random()/6)
+        spark.vx=Math.sin(p1)*Math.sin(p2)*v;
+        spark.vz=Math.cos(p1)*Math.sin(p2)*v;
+        spark.vy=Math.cos(p2)*v;
+        switch(type){
+            case 0: spark.img=sparkPics[pic1]; break;
+            case 1:
+                spark.img=sparkPics[parseInt(Math.random()*2)?pic1:pic2];
+                break;
+            case 2:
+                switch(parseInt(Math.random()*3)){
+                    case 0: spark.img=sparkPics[pic1]; break;
+                    case 1: spark.img=sparkPics[pic2]; break;
+                    case 2: spark.img=sparkPics[pic3]; break;
+                }
+                break;
+        }
+        spark.radius=25+Math.random()*50;
+        spark.alpha=1;
+        spark.trail=new Array();
+        sparks.push(spark);
+    }
+    switch(parseInt(Math.random()*4)){
+        case 0: pow=new Audio(s+"pow1.ogg"); break;
+        case 1: pow=new Audio(s+"pow2.ogg"); break;
+        case 2: pow=new Audio(s+"pow3.ogg"); break;
+        case 3: pow=new Audio(s+"pow4.ogg"); break;
+    }
+    d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
+    pow.volume=1.5/(1+d/10);
+    pow.play();
+}
+
+function doLogic(){
+    
+    if(seedTimer<frames){
+        seedTimer=frames+seedInterval*Math.random()*10;
+        spawnSeed();
+    }
+    for(i=0;i<seeds.length;++i){
+        seeds[i].vy+=gravity;
+        seeds[i].x+=seeds[i].vx;
+        seeds[i].y+=seeds[i].vy;
+        seeds[i].z+=seeds[i].vz;
+        if(frames-seeds[i].born>seedLife){
+            splode(seeds[i].x,seeds[i].y,seeds[i].z);
+            seeds.splice(i,1);
+        }
+    }
+    for(i=0;i<sparks.length;++i){
+        if(sparks[i].alpha>0 && sparks[i].radius>5){
+            sparks[i].alpha-=.01;
+            sparks[i].radius/=1.02;
+            sparks[i].vy+=gravity;
+            point=new Object();
+            point.x=sparks[i].x;
+            point.y=sparks[i].y;
+            point.z=sparks[i].z;
+            if(sparks[i].trail.length){
+                x=sparks[i].trail[sparks[i].trail.length-1].x;
+                y=sparks[i].trail[sparks[i].trail.length-1].y;
+                z=sparks[i].trail[sparks[i].trail.length-1].z;
+                d=((point.x-x)*(point.x-x)+(point.y-y)*(point.y-y)+(point.z-z)*(point.z-z));
+                if(d>9){
+                    sparks[i].trail.push(point);
+                }
+            }else{
+                sparks[i].trail.push(point);
+            }
+            if(sparks[i].trail.length>5)sparks[i].trail.splice(0,1);                
+            sparks[i].x+=sparks[i].vx;
+            sparks[i].y+=sparks[i].vy;
+            sparks[i].z+=sparks[i].vz;
+            sparks[i].vx/=1.075;
+            sparks[i].vy/=1.075;
+            sparks[i].vz/=1.075;
+        }else{
+            sparks.splice(i,1);
+        }
+    }
+    p=Math.atan2(playerX,playerZ);
+    d=Math.sqrt(playerX*playerX+playerZ*playerZ);
+    d+=Math.sin(frames/80)/1.25;
+    t=Math.sin(frames/200)/40;
+    playerX=Math.sin(p+t)*d;
+    playerZ=Math.cos(p+t)*d;
+    yaw=pi+p+t;
+}
+
+function rgb(col){
+    
+    var r = parseInt((.5+Math.sin(col)*.5)*16);
+    var g = parseInt((.5+Math.cos(col)*.5)*16);
+    var b = parseInt((.5-Math.sin(col)*.5)*16);
+    return "#"+r.toString(16)+g.toString(16)+b.toString(16);
+}
+
+function draw(){
+    
+    ctx.clearRect(0,0,cx*2,cy*2);
+    
+    ctx.fillStyle="#ff8";
+    for(i=-100;i<100;i+=3){
+        for(j=-100;j<100;j+=4){
+            x=i;z=j;y=25;
+            point=rasterizePoint(x,y,z);
+            if(point.d!=-1){
+                size=250/(1+point.d);
+                d = Math.sqrt(x * x + z * z);
+                a = 0.75 - Math.pow(d / 100, 6) * 0.75;
+                if(a>0){
+                    ctx.globalAlpha = a;
+                    ctx.fillRect(point.x-size/2,point.y-size/2,size,size);              
+                }
+            }
+        }
+    }
+    ctx.globalAlpha=1;
+    for(i=0;i<seeds.length;++i){
+        point=rasterizePoint(seeds[i].x,seeds[i].y,seeds[i].z);
+        if(point.d!=-1){
+            size=200/(1+point.d);
+            ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+        }
+    }
+    point1=new Object();
+    for(i=0;i<sparks.length;++i){
+        point=rasterizePoint(sparks[i].x,sparks[i].y,sparks[i].z);
+        if(point.d!=-1){
+            size=sparks[i].radius*200/(1+point.d);
+            if(sparks[i].alpha<0)sparks[i].alpha=0;
+            if(sparks[i].trail.length){
+                point1.x=point.x;
+                point1.y=point.y;
+                switch(sparks[i].img){
+                    case sparkPics[0]:ctx.strokeStyle="#f84";break;
+                    case sparkPics[1]:ctx.strokeStyle="#84f";break;
+                    case sparkPics[2]:ctx.strokeStyle="#8ff";break;
+                    case sparkPics[3]:ctx.strokeStyle="#fff";break;
+                    case sparkPics[4]:ctx.strokeStyle="#4f8";break;
+                    case sparkPics[5]:ctx.strokeStyle="#f44";break;
+                    case sparkPics[6]:ctx.strokeStyle="#f84";break;
+                    case sparkPics[7]:ctx.strokeStyle="#84f";break;
+                    case sparkPics[8]:ctx.strokeStyle="#fff";break;
+                    case sparkPics[9]:ctx.strokeStyle="#44f";break;
+                }
+                for(j=sparks[i].trail.length-1;j>=0;--j){
+                    point2=rasterizePoint(sparks[i].trail[j].x,sparks[i].trail[j].y,sparks[i].trail[j].z);
+                    if(point2.d!=-1){
+                        ctx.globalAlpha=j/sparks[i].trail.length*sparks[i].alpha/2;
+                        ctx.beginPath();
+                        ctx.moveTo(point1.x,point1.y);
+                        ctx.lineWidth=1+sparks[i].radius*10/(sparks[i].trail.length-j)/(1+point2.d);
+                        ctx.lineTo(point2.x,point2.y);
+                        ctx.stroke();
+                        point1.x=point2.x;
+                        point1.y=point2.y;
+                    }
+                }
+            }
+            ctx.globalAlpha=sparks[i].alpha;
+            ctx.drawImage(sparks[i].img,point.x-size/2,point.y-size/2,size,size);
+        }
+    }
+}
+
+function frame(){
+
+    if(frames>100000){
+        seedTimer=0;
+        frames=0;
+    }
+    frames++;
+    draw();
+    doLogic();
+    requestAnimationFrame(frame);
+}
+
+window.addEventListener("resize",()=>{
+    canvas.width=canvas.clientWidth;
+    canvas.height=canvas.clientHeight;
+    cx=canvas.width/2;
+    cy=canvas.height/2;
+});
+
+initVars();
+frame();</script>  
+<html>
